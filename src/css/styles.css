@@ -37,6 +37,10 @@ body {
   transform: scale(1.2);
 }
 
+.nav__link-width-100-percent {
+  width: 100%;
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
@@ -138,4 +142,10 @@ td {
 .report__title {
   font-size: 20px;
   text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
