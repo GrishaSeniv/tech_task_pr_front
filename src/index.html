@@ -9,11 +9,16 @@
   <body>
     <main class="main-content">
       <h2 class="main-content__title">Логін</h2>
-      <div id="login-form">
+      <div id="login-form" class="auth-form">
         <p id="error-message"></p>
-        <input type="text" id="username" placeholder="Логін" />
-        <input type="password" id="password" placeholder="Пароль" />
+        <input type="text" id="username" placeholder="Логін" / required>
+        <input type="password" id="password" placeholder="Пароль" required/>
         <button onclick="login()">Логін</button>
+        <button>
+          <li class="nav__list">
+            <a class="nav__link" href="register.html">Register</a>
+          </li>
+        </button>
       </div>
     </main>
 

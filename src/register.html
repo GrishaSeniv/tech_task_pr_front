@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Register page</title>
+  </head>
+  <body>
+    <main class="main-content">
+      <h2 class="main-content__title">Реєстрація</h2>
+      <div id="register-form" class="auth-form">
+        <input type="text" id="username" placeholder="Логін" required />
+        <input type="password" id="password" placeholder="Пароль" required />
+        <input type="text" id="firstName" placeholder="Ім'я" required />
+        <input type="text" id="surname" placeholder="Прізвище" required />
+        <input type="text" id="lastName" placeholder="По-батькові" required />
+        <button onclick="register()">Реєстрація</button>
+      </div>
+    </main>
+
+    <script type="module" src="js/common.js"></script>
+    <script type="module" src="js/register.js"></script>
+  </body>
+</html>
