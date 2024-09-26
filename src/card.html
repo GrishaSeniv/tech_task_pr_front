@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav__list"></ul>
+      </nav>
+    </header>
+    <main class="main-content">
+      <h1 class="main-content__title">Картки</h1>
+      <button id="addCardBtn" class="button">Додати нову картку</button>
+
+      <div class="table-container">
+        <table id="displayCards" class="table-container__table">
+          <thead class="table-container__head">
+            <tr class="table-container__row">
+              <th class="table-container__header">Порядковий номер</th>
+              <th class="table-container__header">Назва</th>
+              <th class="table-container__header">BIN</th>
+              <th class="table-container__header">Активна</th>
+              <th class="table-container__header">ПІБ оператора</th>
+              <th class="table-container__header">Дії</th>
+            </tr>
+          </thead>
+          <tbody class="table-container__body"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <div id="cardModal" class="modal">
+      <div class="modal__content">
+        <span class="close-button">&times;</span>
+        <div class="modal__wrapper">
+          <h2 id="modalTitle">Додати картку</h2>
+          <form id="cardForm" class="modal__form">
+            <input type="hidden" id="cardId" class="modal__input" />
+            <label for="name">Назва:</label>
+            <input type="text" id="name" required />
+            <label for="bin">BIN:</label>
+            <input type="text" id="bin" required />
+            <label for="isActive">Активна:</label>
+            <select id="isActive" required>
+              <option value="" disabled selected>Оберіть статус</option>
+              <option value="true">Так</option>
+              <option value="false">Ні</option>
+            </select>
+            <button type="submit" class="button">Зберегти</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="js/common.js"></script>
+    <script type="module" src="js/card.js"></script>
+  </body>
+</html>

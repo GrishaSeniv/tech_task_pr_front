@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav__list"></ul>
+      </nav>
+    </header>
+    <main class="main-content">
+      <h1 class="main-content__title">Звітність</h1>
+      <div class="report__container">
+        <div class="report__section">
+          <h2 class="report__title">Загальна кількість клієнтів</h2>
+          <table id="totalClients" class="table-container__table">
+            <thead class="table-container__head">
+              <tr class="table-container__row">
+                <th class="table-container__header">Кількість клієнтів</th>
+              </tr>
+            </thead>
+            <tbody class="table-container__body"></tbody>
+          </table>
+        </div>
+        <div class="report__section">
+          <h2 class="report__title">Загальна кількість замовлень</h2>
+          <table id="totalOrders" class="table-container__table">
+            <thead class="table-container__head">
+              <tr class="table-container__row">
+                <th class="table-container__header">Кількість замовлень</th>
+              </tr>
+            </thead>
+            <tbody class="table-container__body"></tbody>
+          </table>
+        </div>
+        <div class="report__section">
+          <h2 class="report__title">Таблиця лідерів</h2>
+          <div class="table-container">
+            <table id="leaderboard" class="table-container__table">
+              <thead class="table-container__head">
+                <tr class="table-container__row">
+                  <th class="table-container__header">Логін</th>
+                  <th class="table-container__header">ПІБ</th>
+                  <th class="table-container__header">
+                    Кількість нових замовлень
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="table-container__body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <button id="exportCsvBtn" class="button">Export to CSV</button>
+    </main>
+
+    <script type="module" src="js/common.js"></script>
+    <script type="module" src="js/report.js"></script>
+  </body>
+</html>

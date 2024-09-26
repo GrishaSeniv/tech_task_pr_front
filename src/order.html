@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orders</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav__list"></ul>
+      </nav>
+    </header>
+    <main class="main-content">
+      <h1 class="main-content__title">Ордери</h1>
+
+      <div class="table-container">
+        <table id="ordersTable" class="table-container__table">
+          <thead class="table-container__head">
+            <tr class="table-container__row">
+              <th class="table-container__header">Порядковий номер</th>
+              <th class="table-container__header">Дата створення</th>
+              <th class="table-container__header">Прізвище</th>
+              <th class="table-container__header">Ім'я</th>
+              <th class="table-container__header">Прізвище(Лат)</th>
+              <th class="table-container__header">Ім'я(Лат)</th>
+              <th class="table-container__header">ПІБ оператора</th>
+              <th class="table-container__header">Назва типу картки</th>
+              <th class="table-container__header">Номер картки</th>
+            </tr>
+          </thead>
+          <tbody class="table-container__body"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script type="module" src="js/common.js"></script>
+    <script type="module" src="js/order.js"></script>
+  </body>
+</html>
