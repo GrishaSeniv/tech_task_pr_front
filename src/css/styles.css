@@ -1,6 +1,15 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .header {
   background-color: #f8f9fa;
   padding: 10px;
+}
+
+#error-message {
+  color: red;
+  display: none;
 }
 
 .nav {
@@ -124,10 +133,6 @@ td {
 .report__container {
   display: flex;
   gap: 20px;
-}
-
-.report__section {
-
 }
 
 .report__title {

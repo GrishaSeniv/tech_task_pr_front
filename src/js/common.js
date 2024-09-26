@@ -30,16 +30,24 @@ export function getCookie(name) {
 }
 
 export const roleAccessMap = {
-  ADMIN: ["order.html", "card.html", "card-generation.html", "order-card.html", "report.html"],
-  USER: ["order.html", "client.html", "order-card.html"]
+  ADMIN: [
+    "order.html",
+    "card.html",
+    "card-generation.html",
+    "order-card.html",
+    "report.html",
+  ],
+  USER: ["order.html", "client.html", "order-card.html"],
 };
 
 export function checkAccess(currentPage, roles) {
-  const hasAccess = roles.some(role => roleAccessMap[role]?.includes(currentPage));
+  const hasAccess = roles.some((role) =>
+    roleAccessMap[role]?.includes(currentPage)
+  );
 
   if (!hasAccess) {
     alert("Access forbidden: You do not have permission to view this page.");
-    window.location.href = "index.html"; // Redirect to a safe page (like home)
+    window.location.href = "index.html";
   }
 }
 
@@ -55,19 +63,23 @@ export function renderNavMenu(roles) {
     }
   };
 
-  // Generate links based on user roles
-  roles.forEach(role => {
+  roles.forEach((role) => {
     if (roleAccessMap[role]) {
       roleAccessMap[role].forEach((page, index) => {
-        addLink(page, page.replace(".html", "").replace("-", " ").replace(/\b\w/g, char => char.toUpperCase()), index + 1);
+        addLink(
+          page,
+          page
+            .replace(".html", "")
+            .replace("-", " ")
+            .replace(/\b\w/g, (char) => char.toUpperCase()),
+          index + 1
+        );
       });
     }
   });
 
-  // Sort links by order
   links.sort((a, b) => a.order - b.order);
 
-  // Create navigation links
   links.forEach((link) => {
     const listItem = document.createElement("li");
     listItem.className = "nav__item";
@@ -78,4 +90,20 @@ export function renderNavMenu(roles) {
     listItem.appendChild(anchor);
     navList.appendChild(listItem);
   });
+
+  const logoutItem = document.createElement("li");
+  logoutItem.className = "nav__item";
+  const logoutAnchor = document.createElement("a");
+  logoutAnchor.href = "#";
+  logoutAnchor.className = "nav__link";
+  logoutAnchor.textContent = "Logout";
+  logoutAnchor.addEventListener("click", logout);
+  logoutItem.appendChild(logoutAnchor);
+  navList.appendChild(logoutItem);
+}
+
+function logout() {
+  document.cookie = "token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT;";
+  localStorage.removeItem("token");
+  window.location.href = "index.html";
 }
