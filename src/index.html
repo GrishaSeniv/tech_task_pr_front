@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Login page</title>
+  </head>
+  <body>
+    <main class="main-content">
+      <h2 class="main-content__title">Логін</h2>
+      <div id="login-form" class="auth-form">
+        <p id="error-message"></p>
+        <input type="text" id="username" placeholder="Логін" required />
+        <input type="password" id="password" placeholder="Пароль" required />
+        <button onclick="login()">Логін</button>
+        <button>
+          <li class="nav__list">
+            <a
+              class="nav__link nav__link-width-100-percent"
+              href="register.html"
+              >Реєстрація</a
+            >
+          </li>
+        </button>
+      </div>
+    </main>
+
+    <script type="module" src="js/common.js"></script>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>
